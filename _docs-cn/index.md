@@ -17,13 +17,12 @@ MapTalks有以下几个优点:
 
 * 简单, 1分钟内[安装](http://www.foo.com), 30分钟即可具备GIS开发能力 
 * 强大, 提供丰富的[GIS功能](http://www.foo.com), 且在不断的增加
-* 高移植性, Windows/Linux, [sqlite/MongoDB/MySQL/PostgreSQL](database.html), MSSQL/Oracle/DB2\* 和[更多](roadmap.html)
+* 高移植性, 支持Windows/Linux, 支持SQLite/MongoDB/MySQL/PostgreSQL, *MSSQL/Oracle/DB2*\* 甚至[更多](roadmap.html)
 * 稳定, 已在世界500强业务系统中稳定运行上万个小时
 * 高可用性, 支持[集群部署](cluster.html), 提供高伸缩性和高可用性  
-* 易维护, 极简的运行架构, 易于维护.
 
 
-\* 对MSSQL, Oracle, DB2在企业版本中支持
+\* *对MSSQL/Oracle/DB2数据库的支持在企业版中提供*
 
 # 许可协议
 

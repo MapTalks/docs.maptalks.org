@@ -25,15 +25,16 @@ MapTalks有以下几个优点:
 
 \* *对MSSQL/Oracle/DB2数据库的支持在企业版中提供*
 
-## 请帮助我们!
+## 欢迎参与贡献!
+
 本文档采用markdown编辑, [开源](http://www.github.com/MapTalks/docs.maptalks.org)并通过github内置的jekyll服务渲染发布。 
 
-每篇文档右上角都有一个编辑按钮, 如果你发现了任何拼写或内容错误, 可随时点击这个按钮修改并提交Pull Request. 
+每篇文档右上角都有一个编辑按钮, 如果你发现了任何拼写或内容错误, 可随时点击这个按钮修改并提交Pull Request。
 
 如果你解决过的一些问题不在我们的文档上, 或者你发现一个别人可能也会用得到的技巧，可以提出 [issue](http://www.github.com/MapTalks/docs.maptalks.org/issues)，我们将会考虑添加在这个指南中。
 
 ## 许可协议
 
-本文档基于[Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/)协议发布.
+本文档基于[Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/)协议发布。
 
-MapTalks基于[GPLv3](http://gplv3.fsf.org/)协议发布.
+MapTalks基于[GPLv3](http://gplv3.fsf.org/)协议发布。

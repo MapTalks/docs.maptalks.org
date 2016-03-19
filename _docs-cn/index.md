@@ -1,8 +1,8 @@
 ---
 layout: docs
 title: 欢迎使用MapTalks
-permalink: /docs/home/
-redirect_from: /docs/index.html
+permalink: /docs-cn/home/
+redirect_from: /docs-cn/index.html
 ---
 
 ## 欢迎使用MapTalks!

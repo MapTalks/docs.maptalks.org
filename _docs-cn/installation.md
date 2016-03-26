@@ -6,15 +6,19 @@ permalink: /docs-cn/installation/
 
 ## 安装前提
 
-* [Node.js](http://nodejs.org) 4+
+您需要安装以下软件以运行MapTalks
+
 * [Java SE](http://www.oracle.com/technetwork/java/javase/overview/index.html) 6+
 
 ## MapTalks安装
 
-两种安装方式: npm安装(推荐[cnpm](https://github.com/cnpm/cnpm),速度会快很多), 下载安装
+两种安装方式: 
+* npm安装(推荐[cnpm](https://github.com/cnpm/cnpm),速度会快很多) 
+* 下载安装
 
 ### NPM安装
 
+* 安装[Node.js](http://nodejs.org) 4+
 * 安装
 
 **注意**: 必须添加-g参数即全局安装方式

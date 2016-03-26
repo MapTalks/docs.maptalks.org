@@ -11,9 +11,9 @@ redirect_from: /docs-cn/index.html
 
 ## 什么是MapTalks?
 
-MapTalks是一款[GIS](https://en.wikipedia.org/wiki/Geographic_information_system)软件, 主要提供地图展现与交互, 位置数据的存储、查询、空间计算、可视化展现等功能。
+MapTalks是一款专门针对企业GIS功能需求开发的地图引擎产品，主要提供地图展现与交互, 位置数据的存储、查询、空间计算、可视化展现等功能。
 
-不同于传统GIS软件, MapTalks 将您的业务功能需求摆在首位, 尽可能简单的将GIS功能融入于业务系统, 极大的降低甚至消除GIS功能开发上的投入成本。
+其目标是在提供完善的企业GIS功能服务前提下， 极大降低GIS开发的难度和技术要求，缩短开发时间，降低开发成本,。
 
 MapTalks有以下几个优点:
 

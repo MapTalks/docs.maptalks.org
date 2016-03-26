@@ -16,11 +16,11 @@ permalink: /docs-cn/installation/
 ### NPM安装
 
 1. 安装
+
 **注意**: 必须添加-g参数即全局安装方式
 ```bash
 npm install -g maptalks-cli
 ```
-
 2. 初始化
 ```bash
 cd /home/foo/

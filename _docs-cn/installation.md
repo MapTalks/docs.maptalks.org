@@ -8,7 +8,7 @@ permalink: /docs-cn/installation/
 
 MapTalks的安装有两种方式: 
 * npm (推荐[cnpm](https://github.com/cnpm/cnpm),速度会快很多) 
-* 安装包安装
+* 安装包
 
 ## 安装前提
 
@@ -30,6 +30,10 @@ npm install -g maptalks-server
 ```
 
 ## 方式二: 安装包
+
+安装包里包含了Java SE运行时， 无需单独下载。
+
+安装步骤:
 
 1. 在[这里](http://www.maptalks.org/download)根据操作系统下载相应版本.
 2. 解压到某个目录下, 例如 /home/foo/maptalks-server

@@ -24,5 +24,3 @@ MapTalks基于以下技术开发：
 
 * Java
 * Node.js
-    
-## 功能列表

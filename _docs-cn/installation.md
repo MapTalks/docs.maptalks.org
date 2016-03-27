@@ -12,38 +12,20 @@ permalink: /docs-cn/installation/
 
 ## MapTalks安装
 
-两种安装方式: 
-* npm安装(推荐[cnpm](https://github.com/cnpm/cnpm),速度会快很多) 
+安装MapTalks有两种方式: 
+* npm安装 (推荐[cnpm](https://github.com/cnpm/cnpm),速度会快很多) 
 * 下载安装
 
 ### NPM安装
 
-* 安装[Node.js](http://nodejs.org) 4+
-* 安装
-
-**注意**: 必须添加-g参数即全局安装方式
+1. 安装[Node.js](http://nodejs.org) 4+
+2. npm install (**注意**: 必须添加-g参数, 即全局安装方式)
 ```bash
 npm install -g maptalks-cli
 ```
-* 初始化
-```bash
-cd /home/foo/
-maptalks init mapapp
-# init后的目录结构
-/home/foo/mapapp
-    |- www
-        |-maptalks.js
-        |-maptalks.css
-        |-images+
-    |- db
-        |-default.db
-    |- logs
-    |- tiles
-        |- sample+
-    |- maptalks.json
-```
+
 ### 下载安装
 
-* 在[这里](http://www.maptalks.org/download)根据操作系统下载相应版本.
-* 解压到某个目录下, 例如 /home/foo/maptalks
-* 运行start.sh (windows下运行start.bat)
+1. 在[这里](http://www.maptalks.org/download)根据操作系统下载相应版本.
+2. 解压到某个目录下, 例如 /home/foo/maptalks
+3. 运行start.sh (windows下运行start.bat)

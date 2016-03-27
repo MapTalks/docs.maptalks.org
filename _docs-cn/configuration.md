@@ -6,13 +6,15 @@ permalink: /docs-cn/configuration/
 
 # 配置
 
-MapTalks 允许在一台服务器上运行多个MapTalks 服务实例， 每个服务实例拥有各自的配置， 也即用下面init命令生成的运行目录。
+MapTalks 允许在一台服务器上运行多个MapTalks 服务实例， 每个服务实例各自拥有独立的运行目录。
+
+运行目录可以用 `maptalks-server init [dir]` 生成， 例如：
 
 ```bash
 maptalks-server init mapapp
 # 运行目录结构
     .
-    |- www
+    |- static
     |   |-maptalks.js
     |   |-maptalks.css
     |   |-images+

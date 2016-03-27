@@ -36,7 +36,7 @@ maptalks-server init mapapp
 ```javascript
 {
     "server" : {
-        "listenOn": "0.0.0.0",
+        "listen": "0.0.0.0",
         "port" : 8090,
         "logLevel": "INFO",
         "logPath" : "./logs",
@@ -48,20 +48,6 @@ maptalks-server init mapapp
                 "name": "default",
                 "type": "sqlite",
                 "database": "./db/default.db"
-            },
-            {
-                "name": "mysql",
-                "type": "mysql",
-                "host": "localhost",
-                "port": 3306,
-                "database": "testdb",
-                "parameters": "?useUnicode=true&characterEncoding=utf-8",
-                "username": "root",
-                "password": "root",
-                "pool" : {
-                    "initialSize": 5,
-                    "maxActive": 50
-                }
             }
         ],
         "pool": {
@@ -80,24 +66,21 @@ maptalks-server init mapapp
     },
     "rest" : {
         "enable" : true,
-        "listenOn": "localhost",
-        "port": 11215
+        "listen": "localhost",
+        "port": 11215,
+        "logLevel" : "INFO",
+        "logPath"  : "./logs"
     },
     "tile" : {
-        "enable"   : false,
-        "logLevel" : "ERROR",
-        "listenOn": "localhost",
+        "enable"   : true,        
+        "listen": "localhost",
         "port": 11214,
-        "instances": [
+        "logLevel" : "INFO",
+        "logPath"  : "./logs",
+        "sources": [
             {
-                "name": "tiles",
-                "uri": "template+file://path/to/tiles?filetype=png",
-                "cache" : "redis://?"
-            },
-            {
-                "name": "arc-tiles",
-                "uri": "arcgis://path/to/arcgis-tiles/Layers",
-                "cache" : "memcached://?"
+                "name": "sample",
+                "uri": "template+file://path/to/tiles?filetype=png"
             }
         ]
     }
@@ -124,7 +107,7 @@ maptalks-server init mapapp
   <tbody>
     <tr class="setting">
       <td rowspan="5">
-        <p class="name"><strong>Server</strong></p>
+        <p class="name"><strong>server</strong></p>
         <p class="description"><strong>主服务</strong></p>
       </td>
       <td>
@@ -132,7 +115,7 @@ maptalks-server init mapapp
         <p class="description">主服务端口</p>
       </td>
       <td class="align-center">
-        <p><code class="option">"port" ： NUMBER</code></p>
+        <p><code class="option">"port" ： 8090</code></p>
         <p class="description">默认 : 8090</p>
       </td>
     </tr>
@@ -142,7 +125,7 @@ maptalks-server init mapapp
         <p class="description">主服务的监听地址， 即只响应指定地址的网络请求</p>
       </td>
       <td class="align-center">
-        <p><code class="option">"listenOn" ： "0.0.0.0"</code></p>
+        <p><code class="option">"listen" ： "0.0.0.0"</code></p>
         <p class="description">默认 : "0.0.0.0"，即不做限制</p>
       </td>
     </tr>
@@ -176,7 +159,165 @@ maptalks-server init mapapp
         <p class="description">默认 : "./static"</p>
       </td>
     </tr>
+    <tr class="setting">
+      <td rowspan="2">
+        <p class="name"><strong>database</strong></p>
+        <p class="description"><strong>数据库配置</strong></p>
+      </td>
+      <td>
+        <p class="name"><strong>默认连接池配置</strong></p>
+        <p class="description">设置默认[Druid](https://github.com/alibaba/druid)的连接池配置参数</p>
+      </td>
+      <td class="align-center">
+        <p><code class="option">"pool" ： KEY-VALUE</code></p>
+        <p><code class="javascript">
+        {            
+            "initialSize": 2,
+            "maxActive": 20,
+            "maxWait": 60000,
+            "timeBetweenEvictionRunsMillis": 60000,
+            "minEvictableIdleTimeMillis": 300000,
+            "validationQuery": "SELECT 'x'",
+            "testWhileIdle": true,
+            "testOnBorrow": false,
+            "testOnReturn": false,
+            "poolPreparedStatements": true,
+            "maxPoolPreparedStatementPerConnectionSize": 20
+        }
+        </code>
+        </p>
+      </td>
+    </tr>
+    <tr class="setting">
+      <td>
+        <p class="name"><strong>数据库连接配置</strong></p>
+        <p class="description">配置多个数据库连接实例， 供rest服务等依赖数据库的模块服务使用。</p>
+      </td>
+      <td class="align-center">
+        <p><code class="option">instances ： [KEY-VALUE]</code></p>
+        <p class="description">详细的数据库连接实例配置说明请参考[这里](configuration-db.html)</p>
+      </td>
+    </tr>
+    <tr class="setting">
+      <td rowspan="5">
+        <p class="name"><strong>rest</strong></p>
+        <p class="description"><strong>服务配置</strong></p>
+      </td>
+      <td>
+        <p class="name"><strong>是否启用</strong></p>
+        <p class="description">是否启用rest模块</p>
+      </td>
+      <td class="align-center">
+        <p><code class="option">"enable" : true</code></p>
+        <p class="description">true : 启用; false : 禁用</p>
+      </td>
+    </tr>
+    <tr class="setting">
+      <td>
+        <p class="name"><strong>端口</strong></p>
+        <p class="description">rest服务端口</p>
+      </td>
+      <td class="align-center">
+        <p><code class="option">"port" : 11215</code></p>
+        <p class="description">默认: 11215</p>
+      </td>
+    </tr>
+    <tr class="setting">
+      <td>
+        <p class="name"><strong>监听地址</strong></p>
+        <p class="description">服务监听地址， 即只响应指定地址的网络请求</p>
+      </td>
+      <td class="align-center">
+        <p><code class="option">"listen" : "localhost"</code></p>
+        <p class="description">默认: "localhost"</p>
+      </td>
+    </tr>
+    <tr class="setting">
+      <td>
+        <p class="name"><strong>日志级别</strong></p>
+        <p class="description">服务日志级别</p>
+      </td>
+      <td class="align-center">
+        <p><code class="option">"logLevel" ： "INFO"</code></p>
+        <p class="description">默认 : "INFO"</p>
+      </td>
+    </tr>
+    <tr class="setting">
+      <td>
+        <p class="name"><strong>日志文件夹</strong></p>
+        <p class="description">服务日志的文件夹</p>
+      </td>
+      <td class="align-center">
+        <p><code class="option">"logPath" ： "./logs"</code></p>
+        <p class="description">默认 : "./logs"</p>
+      </td>
+    </tr>
     
+    
+    <tr class="setting">
+      <td rowspan="6">
+        <p class="name"><strong>tile</strong></p>
+        <p class="description"><strong>服务配置</strong></p>
+      </td>
+      <td>
+        <p class="name"><strong>是否启用</strong></p>
+        <p class="description">是否启用tile模块</p>
+      </td>
+      <td class="align-center">
+        <p><code class="option">"enable" : true</code></p>
+        <p class="description">true : 启用; false : 禁用</p>
+      </td>
+    </tr>
+    <tr class="setting">
+      <td>
+        <p class="name"><strong>端口</strong></p>
+        <p class="description">tile服务端口</p>
+      </td>
+      <td class="align-center">
+        <p><code class="option">"port" : 11215</code></p>
+        <p class="description">默认: 11215</p>
+      </td>
+    </tr>
+    <tr class="setting">
+      <td>
+        <p class="name"><strong>监听地址</strong></p>
+        <p class="description">服务监听地址， 即只响应指定地址的网络请求</p>
+      </td>
+      <td class="align-center">
+        <p><code class="option">"listen" : "localhost"</code></p>
+        <p class="description">默认: "localhost"</p>
+      </td>
+    </tr>
+    <tr class="setting">
+      <td>
+        <p class="name"><strong>日志级别</strong></p>
+        <p class="description">服务日志级别</p>
+      </td>
+      <td class="align-center">
+        <p><code class="option">"logLevel" ： "INFO"</code></p>
+        <p class="description">默认 : "INFO"</p>
+      </td>
+    </tr>
+    <tr class="setting">
+      <td>
+        <p class="name"><strong>日志文件夹</strong></p>
+        <p class="description">服务日志的文件夹</p>
+      </td>
+      <td class="align-center">
+        <p><code class="option">"logPath" ： "./logs"</code></p>
+        <p class="description">默认 : "./logs"</p>
+      </td>
+    </tr>
+    <tr class="setting">
+      <td>
+        <p class="name"><strong>tile服务数据源配置</strong></p>
+        <p class="description">为tile服务配置数据源，支持[tiletalks](https://github.com/MapTalks/tiletalks)所支持的所有数据源.</p>
+      </td>
+      <td class="align-center">
+        <p><code class="option">"sources" ： [KEY-VALUE]</code></p>
+        <p class="description">更详细的tile数据源配置说明请参考[这里](https://github.com/MapTalks/tiletalks/sources.md)</p>
+      </td>
+    </tr>
   </tbody>
 </table>
 </div>

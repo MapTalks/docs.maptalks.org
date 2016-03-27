@@ -311,7 +311,7 @@ maptalks-server init mapapp
     <tr class="setting">
       <td>
         <p class="name"><strong>tile服务数据源配置</strong></p>
-        <p class="description">为tile服务配置数据源，支持[tiletalks](https://github.com/MapTalks/tiletalks)所支持的所有数据源.</p>
+        <p class="description">为tile服务配置数据源，支持 [tiletalks](https://github.com/MapTalks/tiletalks) 所支持的所有数据源.</p>
       </td>
       <td class="align-center">
         <p><code class="option">"sources" ： [KEY-VALUE]</code></p>

@@ -27,7 +27,7 @@ maptalks-server init mapapp
     |- package.json
 ```
 
-## maptalks.jso配置说明
+## maptalks.json配置说明
 
 每个MapTalks运行目录中只有一个配置文件， 即根目录下的 `maptalks.json`
 

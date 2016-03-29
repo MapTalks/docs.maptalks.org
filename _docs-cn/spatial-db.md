@@ -46,12 +46,13 @@ MapTalks在rest模块中用HTTP RestFul API接口的形式提供服务。
 * 图层表 maptalks_gis_layer, 空间库中的图层均记录该表中
 
 例如我们想在MySQL数据库中创建一个空间库， 步骤如下：
-1. 在MySQL中创建一个数据库， 例如 testdb
+
+* 在MySQL中创建一个数据库， 例如 testdb
 ```sql
 CREATE DATABASE testdb;
 ```
-2. 参考[这里](configuration-db.html)， 在maptalks.json配置文件中增加对testdb的连接实例
-3. 调用MapTalks的rest服务接口， 初始化空间库， 以调用java sdk为例：
+* 参考[这里](configuration-db.html)， 在maptalks.json配置文件中增加对testdb的连接实例
+* 调用MapTalks的rest服务接口， 初始化空间库， 以调用java sdk为例：
 ```java
 //host MapTalks服务的主机
 //port MapTalks服务的端口号

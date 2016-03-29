@@ -80,7 +80,7 @@ maptalks-server init mapapp
         "sources": [
             {
                 "name": "sample",
-                "uri": "template+file://path/to/tiles?filetype=png"
+                "uri": "template+file://./sample?filetype=png"
             }
         ]
     }

@@ -27,7 +27,7 @@ MapTalks的功能分为以下几类：
 
 ## 接口形式
 
-接口形式： HTTP RestFul
+接口形式： [HTTP RestFul](rest-api.html)
 
 请求数据格式： JSON， [GeoJSON](http://www.geojson.org)作为Feature的数据格式
 

@@ -112,12 +112,12 @@ MapTalks在rest模块中用HTTP RestFul API接口的形式提供服务。
 ```sql
 CREATE DATABASE testdb;
 ```
-* 参考[这里](configuration-db.html)， 在maptalks.json配置文件中增加对testdb的连接实例
+* 参考[这里](configuration-db.html)， 在config.json配置文件中增加对testdb的连接实例
 * 调用MapTalks的rest服务接口， 初始化空间库， 以调用java sdk为例：
 ```java
 //host MapTalks服务的主机
 //port MapTalks服务的端口号
-//空间库， 即maptalks.json中数据库连接实例的name
+//空间库， 即config.json中数据库连接实例的name
 MapDatabase db = new MapDatabase("localhost",8090,"testdb");
 //采用GCJ02作为默认的坐标参考系
 db.install(new InstallSettings(CRS.GCJ02));

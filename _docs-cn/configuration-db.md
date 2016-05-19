@@ -21,9 +21,9 @@ MapTalks目前支持将以下数据库或数据文件作为空间库：
 * Oracle
 * DB2
 
-## maptalks.json
+## config.json
 
-空间数据库配置在[maptalks.json](configuration.html)中的`database`配置项， 如下所示：
+空间数据库配置在[config.json](configuration.html)中的`database`配置项， 如下所示：
 
 ```javascript
 ...
@@ -177,7 +177,7 @@ SQLite/Spatialite的配置方法:
     //数据库类型
     "type": "sqlite",
     //sqlite的数据文件路径
-    //如果是相对路径， 跟路径为maptalks.json的所在目录
+    //如果是相对路径， 跟路径为config.json的所在目录
     "database": "./db/default.db"
     //sqlite不需要配置数据库连接池
 }

@@ -32,20 +32,20 @@ $ maptalks-server init mapapp
     |- logs    
     |- tile
     |   |- sample
-    |- maptalks.json
+    |- config.json
     |- package.json
 {% endhighlight %}
 
 * 启动服务
 
 ```bash
-$ maptalks-server start /path/to/maptalks.json
+$ maptalks-server start /path/to/config.json
 ```
 
 * 停止服务
 
 ```bash
-$ maptalks-server stop /path/to/maptalks.json
+$ maptalks-server stop /path/to/config.json
 ```
 
 * 注册系统服务

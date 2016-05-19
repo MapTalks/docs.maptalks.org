@@ -23,15 +23,15 @@ maptalks-server init mapapp
     |- logs    
     |- tile
     |   |- sample
-    |- maptalks.json
+    |- config.json
     |- package.json
 ```
 
-## maptalks.json配置说明
+## config.json配置说明
 
-每个MapTalks运行目录中只有一个配置文件， 即根目录下的 `maptalks.json`
+每个MapTalks运行目录中只有一个配置文件， 即根目录下的 `config.json`
 
-初始的maptalks.json内容如下：
+初始的config.json内容如下：
 
 ```javascript
 {
@@ -91,7 +91,7 @@ maptalks-server init mapapp
 
 日志级别： "ERROR", "WARN", "INFO", "DEBUG"
 
-根路径： 配置中相对路径的根路径为运行参数中maptalks.json所在目录
+根路径： 配置中相对路径的根路径为运行参数中config.json所在目录
 
 <div class="mobile-side-scroller">
 <table>

@@ -1,0 +1,14 @@
+markdown: kramdown
+highlighter: rouge
+
+repository: https://github.com/MapTalks/mapresty
+
+timezone: Asia/Shanghai
+
+collections:
+  docs-cn:
+    output: true
+
+name: MapResty
+description: The MapTalks server on Node.js. A simple-to-use GIS server for enterprise map apps.
+url: https://maptalks.org

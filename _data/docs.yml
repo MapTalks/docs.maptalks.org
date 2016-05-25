@@ -1,0 +1,19 @@
+- title: Getting Started
+  docs:
+  - index
+  - overview
+  - usage
+
+- title: Installation
+  docs:
+  - installation
+
+- title: Configuration
+  docs:
+  - configuration
+  - configuration-db
+
+- title: Usage
+  docs:
+  - spatial-db
+  - rest-api

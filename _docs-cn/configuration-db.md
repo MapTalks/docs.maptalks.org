@@ -99,7 +99,7 @@ MapTalks目前支持将以下数据库或数据文件作为空间库：
 ## File
 
 MapTalks支持基于文件系统的空间库， 文件空间库是一个本地文件夹， 其中包含了:
-* 一个JSON格式的空间库配置文件maptalks_db.json
+* 一个JSON格式的空间库配置文件db.json
 * 图层数据文件， 支持shapefile和GeoJSON数据
 
 文件空间库只支持file_shp和file_geojson类型图层， 不支持其他的图层类型。
@@ -110,7 +110,7 @@ MapTalks支持基于文件系统的空间库， 文件空间库是一个本地�
 一个典型的文件空间库文件夹结构
 ```bash
     .
-    |- maptalks_db.json
+    |- db.json
     |- shp
     |   |- layer1.shp # shapefile空间数据文件
     |   |- layer1.dbf # shapefile属性数据文件
@@ -118,7 +118,7 @@ MapTalks支持基于文件系统的空间库， 文件空间库是一个本地�
     |   |- layer2.geojson # geojson数据文件
 ```
 
-### maptalks_db.json示例
+### db.json示例
 ```javascript
 {
     // 空间库的crs

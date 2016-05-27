@@ -27,9 +27,9 @@ MapResty的安装非常简单，只需要从[此处](https://github.com/MapTalks
 
 `maptalks-server`命令用法：
 
-- 运行目录初始化
+## 运行目录初始化
 
-运行目录存放了`maptalks-server`运行时所需的配置文件、示例数据、www服务的静态资源(例如客户端地图程序maptalks.js)等。
+运行目录存放了`maptalks-server`所需的配置文件、示例数据、www服务的静态资源(例如客户端地图程序maptalks.js)等。
 
 ```bash
 $ maptalks-server init /path/to/instance
@@ -55,13 +55,13 @@ $ maptalks-server init /path/to/instance
 
 在进行一些[配置](configuration.html)之后，即可启动服务了。
 
-- 启动服务
+## 启动服务
 
 ```bash
 $ maptalks-server start /path/to/instance/config.json
 ```
 
-- 停止服务
+## 停止服务
 
 ```bash
 $ maptalks-server stop /path/to/instance/config.json

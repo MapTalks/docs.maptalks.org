@@ -232,7 +232,7 @@ SQLite/Spatialite的配置方法:
     //连接池配置
     //这里设置的参数会覆盖默认连接池配置中的相应参数
     "pool" : {
-        "initialSize": 3        
+        "initialSize": 3
     }
 }
 ```
@@ -278,7 +278,7 @@ SQLite/Spatialite的配置方法:
     //连接池配置
     //这里设置的参数会覆盖默认连接池配置中的相应参数
     "pool" : {
-        "initialSize": 3        
+        "initialSize": 3
     }
 }
 ```
@@ -303,7 +303,7 @@ SQLite/Spatialite的配置方法:
     //连接池配置
     //这里设置的参数会覆盖默认连接池配置中的相应参数
     "pool" : {
-        "initialSize": 3        
+        "initialSize": 3
     }
 }
 ```
@@ -336,4 +336,3 @@ DB2存在多种JDBC驱动， 不同的情况需要不同的JDBC驱动， [这里
     }
 }
 ```
-

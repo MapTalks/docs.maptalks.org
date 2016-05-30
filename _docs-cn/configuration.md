@@ -11,7 +11,7 @@ MapTalks 允许在一台服务器上运行多个MapTalks 服务实例， 每个�
 运行目录可以用 `maptalks-server init [dir]` 生成， 例如：
 
 ```bash
-maptalks-server init mapapp
+maptalks-server init /path/to/instance
 # 运行目录结构
     .
     |- static
@@ -20,11 +20,10 @@ maptalks-server init mapapp
     |   |-images+
     |- db
     |   |-default.db
-    |- logs    
+    |- logs
     |- tile
     |   |- sample
     |- config.json
-    |- package.json
 ```
 
 ## config.json配置说明
@@ -199,7 +198,7 @@ maptalks-server init mapapp
       </td>
     </tr>
     <tr class="setting">
-      <td rowspan="5">
+      <td rowspan="4">
         <p class="name"><strong>rest</strong></p>
         <p class="description"><strong>服务配置</strong></p>
       </td>
@@ -243,19 +242,7 @@ maptalks-server init mapapp
       </td>
     </tr>
     <tr class="setting">
-      <td>
-        <p class="name"><strong>日志文件夹</strong></p>
-        <p class="description">服务日志的文件夹</p>
-      </td>
-      <td class="align-center">
-        <p><code class="option">"logPath" ： "./logs"</code></p>
-        <p class="description">默认 : "./logs"</p>
-      </td>
-    </tr>
-    
-    
-    <tr class="setting">
-      <td rowspan="6">
+      <td rowspan="5">
         <p class="name"><strong>tile</strong></p>
         <p class="description"><strong>服务配置</strong></p>
       </td>
@@ -300,22 +287,12 @@ maptalks-server init mapapp
     </tr>
     <tr class="setting">
       <td>
-        <p class="name"><strong>日志文件夹</strong></p>
-        <p class="description">服务日志的文件夹</p>
-      </td>
-      <td class="align-center">
-        <p><code class="option">"logPath" ： "./logs"</code></p>
-        <p class="description">默认 : "./logs"</p>
-      </td>
-    </tr>
-    <tr class="setting">
-      <td>
         <p class="name"><strong>tile服务数据源配置</strong></p>
-        <p class="description">为tile服务配置数据源，支持 <a href="https://github.com/MapTalks/tiletalks">tiletalks</a> 所支持的所有数据源.</p>
+        <p class="description">为tile服务配置数据源，支持 <a href="https://github.com/MapTalks/mapresty-tile">mapresty-tile</a> 所支持的所有数据源.</p>
       </td>
       <td class="align-center">
         <p><code class="option">"sources" ： [KEY-VALUE]</code></p>
-        <p class="description">更详细的tile数据源配置说明请参考<a href="https://github.com/MapTalks/tiletalks/sources.md">这里</a></p>
+        <p class="description">更详细的tile数据源配置说明请参考<a href="https://github.com/MapTalks/mapresty-tile/blob/master/README.md">这里</a></p>
       </td>
     </tr>
   </tbody>

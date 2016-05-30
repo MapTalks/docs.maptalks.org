@@ -82,6 +82,13 @@ maptalks-server init /path/to/instance
                 "uri": "template+file://./sample?filetype=png"
             }
         ]
+    },
+    "snap": {
+        "enable": false,
+        "listen": "localhost",
+        "port": 11219,
+        "logLevel": "INFO",
+        "folder": "./snapshots"
     }
 }
 ```
@@ -293,6 +300,60 @@ maptalks-server init /path/to/instance
       <td class="align-center">
         <p><code class="option">"sources" ： [KEY-VALUE]</code></p>
         <p class="description">更详细的tile数据源配置说明请参考<a href="https://github.com/MapTalks/mapresty-tile/blob/master/README.md">这里</a></p>
+      </td>
+    </tr>
+    <tr class="setting">
+      <td rowspan="5">
+        <p class="name"><strong>snap</strong></p>
+        <p class="description"><strong>服务配置</strong></p>
+      </td>
+      <td>
+        <p class="name"><strong>是否启用</strong></p>
+        <p class="description">是否启用snap模块</p>
+      </td>
+      <td class="align-center">
+        <p><code class="option">"enable" : true</code></p>
+        <p class="description">true : 启用; false : 禁用</p>
+      </td>
+    </tr>
+    <tr class="setting">
+      <td>
+        <p class="name"><strong>端口</strong></p>
+        <p class="description">snap服务端口</p>
+      </td>
+      <td class="align-center">
+        <p><code class="option">"port" : 11219</code></p>
+        <p class="description">默认: 11219</p>
+      </td>
+    </tr>
+    <tr class="setting">
+      <td>
+        <p class="name"><strong>监听地址</strong></p>
+        <p class="description">服务监听地址， 即只响应指定地址的网络请求</p>
+      </td>
+      <td class="align-center">
+        <p><code class="option">"listen" : "localhost"</code></p>
+        <p class="description">默认: "localhost"</p>
+      </td>
+    </tr>
+    <tr class="setting">
+      <td>
+        <p class="name"><strong>日志级别</strong></p>
+        <p class="description">服务日志级别</p>
+      </td>
+      <td class="align-center">
+        <p><code class="option">"logLevel" ： "INFO"</code></p>
+        <p class="description">默认 : "INFO"</p>
+      </td>
+    </tr>
+    <tr class="setting">
+      <td>
+        <p class="name"><strong>截图目录</strong></p>
+        <p class="description">截取的图片的存储目录</p>
+      </td>
+      <td class="align-center">
+        <p><code class="option">"folder"： "./snapshots"</code></p>
+        <p class="description">默认 : "./snapshots"</p>
       </td>
     </tr>
   </tbody>

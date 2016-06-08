@@ -12,8 +12,17 @@
   docs:
   - configuration
   - configuration-db
+  - db-file
+  - db-sqlite
+  - db-mysql
+  - db-postgresql
+  - db-mongodb
+  - db-ms-sql-server
+  - db-oracle
+  - db-ibm-db2
 
 - title: Usage
   docs:
   - spatial-db
-  - rest-api
+  - rest-api-database
+  - rest-api-topology

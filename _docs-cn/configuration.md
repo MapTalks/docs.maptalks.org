@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 安装
+title: 配置
 permalink: /docs-cn/configuration/
 ---
 
